@@ -1,0 +1,27 @@
+name: Update build schedule
+
+on:
+  push:
+    branches: ["main"]
+    paths-ignore:
+      - 'schedule.json'
+      - 'manifests'
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    name: Regenerate build schedule
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+      - name: Regenerate
+        continue-on-error: true
+        run: |
+          git config --local user.name "Jenkins"
+          git config --local user.email "jenkins@noreply.hansol.ca"
+          python3 scripts/build-schedule-generator.py
+          git commit -a -m "`date`"
+      - name: Push changes
+        continue-on-error: true
+        uses: ad-m/github-push-action@master
