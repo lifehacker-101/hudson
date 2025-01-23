@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+  <project path="hardware/lge" remote="github" name="LineageOS/android_hardware_lge" revision="lineage-22.1" />
+  <project path="hardware/sony/timekeep" remote="github" name="LineageOS/android_hardware_sony_timekeep" revision="lineage-22.1" />
+
+  <project path="device/lge/joan" remote="github" name="lge-msm8998/android_device_lge_joan" revision="lineage-22.1" />
+  <project path="device/lge/joan-common" remote="github" name="lge-msm8998/android_device_lge_joan-common" revision="lineage-22.1" />
+  <project path="kernel/lge/msm8998" remote="github" name="lge-msm8998/android_kernel_lge_msm8998" revision="lineage-22.1" />
+  <project path="vendor/lge/joan" name="lge-msm8998/proprietary_vendor_lge_joan" remote="github" revision="lineage-22.1" />
+  <project path="vendor/lge/joan-common" remote="github" name="lge-msm8998/proprietary_vendor_lge_joan-common" revision="lineage-22.1" />
+</manifest>
